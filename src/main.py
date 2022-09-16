@@ -24,6 +24,7 @@ def main():
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
 
+
 # точка вхождения
 if __name__ == "__main__":
     main()
