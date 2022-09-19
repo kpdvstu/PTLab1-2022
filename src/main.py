@@ -19,7 +19,7 @@ def main():
 
     reader = TextDataReader()
     students = reader.read(path)
-    print("Hallo")  # test
+    print("Hallo")  # testt
     print("Students: ", students)
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
