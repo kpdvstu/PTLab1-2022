@@ -23,6 +23,7 @@ def main():
     print("Students: ", students)
     rating = CalcRating(students).calc()
     print("Rating: ", rating)
+    print("Sosi")
 
 
 if __name__ == "__main__":
