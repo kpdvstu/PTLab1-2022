@@ -12,9 +12,9 @@ from DataReader import DataReader
 
 def check_file(path: str):
     if not os.path.exists(path):
-        raise Exception(path + " not exist")
+        raise OSError(path + " not exist")
     if not os.path.isfile(path):
-        raise Exception(path + " not a file")
+        raise OSError(path + " not a file")
 
 
 class YamlDataReader(DataReader, ABC):
