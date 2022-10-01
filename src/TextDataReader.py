@@ -28,14 +28,14 @@ class JsonDataReader(DataReader):
         self.students: DataType = {}
 
     def read(self, path: str) -> DataType:
-        with open(path, encoding='utf-8') as file:
+        with open(path, 'r', encoding='utf-8') as file:
             for line in file:
-                if line.endswith(": {'):
+                line = line.strip()
+                if line.endswith(": {"):
                     self.key = line.strip("\" : {")
                     self.students[self.key] = []
-                    print(self.key)
-                elif not line.startswith("{ }  "):
-                    subj, score = line.split(": ", maxsplit=1)
+                elif not line.startswith(('{','}')):
+                    subj, score = line.split(":", maxsplit=1)
                     subj = subj.strip("\"")
                     score = score.strip(",")
                     self.students[self.key].append(
