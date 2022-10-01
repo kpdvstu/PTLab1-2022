@@ -25,6 +25,7 @@ def main():
                                          # в функции calc считаем срений бал
 
     print("Rating: ", rating)            # Печатаем словарь с рейтингом студентов
+    print("new_branch")
 
 
 if __name__ == "__main__":
