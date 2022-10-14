@@ -21,11 +21,14 @@ def main():
     reader = JsonReader()
     students = reader.read(path)
     #вывод студента
-    print("Students: ", students)
+    print("Список студентов: ", students)
     #вывод рейтинга
     rating = CalcRating(students).calc()
-    print("Rating: ", rating)
-
+    sorted_rating = dict(sorted(rating.items(), key=lambda item: item[1]))
+    print("Отсортированный рейтинг:",sorted_rating)
+    quan = len(sorted_rating)//4
+    result = list(sorted_rating.items())[:quan]
+    print("Последняя квартиль:",result)
 
 if __name__ == "__main__":
     main()

@@ -18,6 +18,8 @@ class JsonReader(DataReader):
                 for x in data[i]:
                     self.students[self.key].append((x,int(data[i][x])))
 
+
+
         return self.students
 
 
