@@ -4,6 +4,7 @@ from DataReader import DataReader
 
 
 class JsonDataReader(DataReader):
+
     def __init__(self):
         self.key: str = ""
         self.students: DataType = {}
