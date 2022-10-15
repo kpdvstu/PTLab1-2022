@@ -3,6 +3,7 @@ import pytest
 from src.Types import DataType
 from src.JsonDataReader import JsonDataReader
 
+
 class TestJsonDataReader:
 
     @pytest.fixture()
@@ -51,4 +52,3 @@ def test_noncorrect_path_to_file(
         noncoorrect_path_to_file: tuple[str, DataType]) -> None:
     path = JsonDataReader().read(noncoorrect_path_to_file[0])
     assert path == noncoorrect_path_to_file[1]
-
