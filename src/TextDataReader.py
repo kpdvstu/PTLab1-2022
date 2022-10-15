@@ -22,9 +22,4 @@ class TextDataReader(DataReader):
                             (subj.strip(), int(score.strip())))
             return self.students
         except FileNotFoundError:
-            return {"Error":[("no such file of directory", 1)]}
-
-
-
-
-
+            return {"Error": [("no such file of directory", 1)]}

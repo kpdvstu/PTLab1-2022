@@ -44,7 +44,7 @@ class TestJsonDataReader:
 
 @pytest.fixture()
 def noncoorrect_path_to_file() -> tuple[str, DataType]:
-    return "../dat/data.json",{"Error": [("no such file of directory", 1)]}
+    return "../dat/data.json", {"Error": [("no such file of directory", 1)]}
 
 
 def test_noncorrect_path_to_file(

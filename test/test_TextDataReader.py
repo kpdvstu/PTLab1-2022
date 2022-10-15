@@ -3,6 +3,7 @@ import pytest
 from src.Types import DataType
 from src.TextDataReader import TextDataReader
 
+
 class TestTextDataReader:
 
     @pytest.fixture()
@@ -33,10 +34,3 @@ class TestTextDataReader:
     def test_read(self, filepath_and_data: tuple[str, DataType]) -> None:
         file_content = TextDataReader().read(filepath_and_data[0])
         assert file_content == filepath_and_data[1]
-
-
-
-
-
-
-

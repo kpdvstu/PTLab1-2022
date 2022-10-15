@@ -2,8 +2,8 @@
 from Types import DataType
 from DataReader import DataReader
 
-class JsonDataReader(DataReader):
 
+class JsonDataReader(DataReader):
     def __init__(self):
         self.key: str = ""
         self.students: DataType = {}
@@ -16,7 +16,7 @@ class JsonDataReader(DataReader):
                     if line.endswith(": {"):
                         self.key = line.strip("\" : {")
                         self.students[self.key] = []
-                    elif not line.startswith(('{','}')):
+                    elif not line.startswith(('{', '}')):
                         subj, score = line.split(":", maxsplit=1)
                         subj = subj.strip("\"")
                         score = score.strip(",")
