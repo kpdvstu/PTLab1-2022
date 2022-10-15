@@ -3,8 +3,7 @@ import argparse
 import sys
 
 from CalcRating import CalcRating
-from TextDataReader import TextDataReader
-from TextDataReader import JsonDataReader
+from JsonDataReader import JsonDataReader
 
 
 def get_path_from_arguments(args) -> str:
