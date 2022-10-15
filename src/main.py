@@ -2,8 +2,8 @@
 import argparse
 import sys
 
-from CalcRating import CalcRating
 from JsonDataReader import JsonDataReader
+from CalcAcademicFailure import CalcAcadFail
 
 
 def get_path_from_arguments(args) -> str:
@@ -22,8 +22,10 @@ def main():
     students = reader.read(path)
     print("Students: ", students)
 
-#    rating = CalcRating(students).calc()
-#    print("Rating: ", rating)
+    rating = CalcAcadFail(students).calc()
+    print("Число студентов имеющих задолженность(ти): " + str(rating[0]))
+    print(rating[1])
+    print(rating[2])
 
 
 if __name__ == "__main__":
