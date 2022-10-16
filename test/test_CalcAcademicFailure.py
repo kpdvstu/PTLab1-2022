@@ -61,5 +61,3 @@ class TestAcadFail:
                                                       RatingType]) -> None:
         nofail = CalcAcadFail(input_data[1]).calc()
         assert nofail == input_data[3]
-
-
