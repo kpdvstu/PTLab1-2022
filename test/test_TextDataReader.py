@@ -2,7 +2,7 @@
 import pytest
 from src.Types import DataType
 from src.TextDataReader import TextDataReader
-
+import src
 
 class TestTextDataReader:
 
