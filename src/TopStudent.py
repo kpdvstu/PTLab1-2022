@@ -17,7 +17,7 @@ class TopStudent:
             for subject in self.data[key]:
                 if subject[1] >= 90:
                     x += 1
-
+                    
             if x == len(self.data[key]):
                 studentName = key
 
