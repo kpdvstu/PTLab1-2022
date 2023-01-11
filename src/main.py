@@ -4,7 +4,8 @@ import sys
 
 from CalcRating import CalcRating
 from TextDataReader import TextDataReader
-
+from TopStudent import TopStudent
+from YAMLReader import TextDataReaderYAML
 
 def get_path_from_arguments(args) -> str:
     parser = argparse.ArgumentParser(description="Path to datafile")
@@ -17,11 +18,11 @@ def get_path_from_arguments(args) -> str:
 def main():
     path = get_path_from_arguments(sys.argv[1:])
 
-    reader = TextDataReader()
+    reader = TextDataReaderYAML()
     students = reader.read(path)
     print("Students: ", students)
 
-    rating = CalcRating(students).calc()
+    rating = TopStudent(students).calc()
     print("Rating: ", rating)
 
 
